@@ -2,6 +2,7 @@ const { codeInspectorPlugin } = require('code-inspector-plugin')
 const isDev = process.env.NODE_ENV !== 'production'
 
 module.exports = {
+  publicPath: isDev ? '/' : '/form_design',
   devServer: {
     host: '0.0.0.0',
     port: 2777, // vue启动的端口
