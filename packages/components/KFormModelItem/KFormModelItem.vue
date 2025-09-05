@@ -1,9 +1,5 @@
 <!--
  * @Description: 传入record数据，通过判断record.type，来渲染对应的组件
- * @Author: kcz
- * @Date: 2020-01-02 22:41:48
- * @LastEditors: kcz
- * @LastEditTime: 2022-10-31 20:39:53
  -->
 <template>
   <component
@@ -25,11 +21,6 @@
   </a-form-model-item>
 </template>
 <script>
-/*
- * author kcz
- * date 2019-11-20
- */
-
 import { pluginManager } from "../../utils/index";
 const _ = require("lodash/object");
 

@@ -93,17 +93,15 @@
         <a-form-item label="表单属性">
           <kCheckbox v-model="config.hideRequiredMark" label="隐藏必选标记" />
         </a-form-item>
-        <a-form-item label="提示">
+        <!-- <a-form-item label="提示">
           实际预览效果请点击预览查看
-        </a-form-item>
+        </a-form-item> -->
       </a-form>
     </div>
   </div>
 </template>
 <script>
 /*
- * author kcz
- * date 2019-11-20
  * description 表单属性设置面板组件
  */
 import kCheckbox from "../../KCheckbox/index.vue";

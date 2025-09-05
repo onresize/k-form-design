@@ -1,9 +1,5 @@
 <!--
  * @Description: 将数据通过k-form-item组件解析，生成控件
- * @Author: kcz
- * @Date: 2019-12-30 00:37:05
- * @LastEditTime: 2021-05-27 15:19:02
- * @LastEditors: kcz
  * @FilePath: \k-form-design\packages\KFormDesign\module\formNode.vue
  -->
 <template>
@@ -18,7 +14,7 @@
     <div
       v-if="!hideModel"
       class="show-key-box"
-      v-text="record.label + (record.model ? '/' + record.model : '')"
+      v-text="record.label + (record.model ? '：' + record.model : '')"
     />
     <div
       class="copy"
@@ -38,8 +34,6 @@
 </template>
 <script>
 /*
- * author kcz
- * date 2019-11-20
  * description 通过json生成的单个表单节点
  */
 import kFormItem from "../../KFormItem/index";

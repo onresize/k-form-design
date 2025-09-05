@@ -1,9 +1,5 @@
 <!--
  * @Description: 对上传图片组件进行封装
- * @Author: kcz
- * @Date: 2020-03-17 12:53:50
- * @LastEditors: kcz
- * @LastEditTime: 2022-10-26 21:14:16
  -->
 <template>
   <div
@@ -52,8 +48,6 @@
 </template>
 <script>
 /*
- * author kcz
- * date 2019-12-31
  * description 上传图片组件
  */
 import { pluginManager } from "../../utils/index";

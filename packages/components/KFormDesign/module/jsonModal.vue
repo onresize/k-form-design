@@ -14,8 +14,6 @@
 </template>
 <script>
 /*
- * author kcz
- * date 2019-11-20
  * description 生成json Modal
  */
 import previewCode from "../../PreviewCode/index";

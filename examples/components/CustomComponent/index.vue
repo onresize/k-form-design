@@ -1,9 +1,5 @@
 <!--
  * @Description:自定义控件
- * @Author: kcz
- * @Date: 2020-03-13 10:50:49
- * @LastEditors: kcz
- * @LastEditTime: 2020-07-09 22:19:53
  -->
 <template>
   <div>

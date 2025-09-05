@@ -30,11 +30,6 @@
   </a-config-provider>
 </template>
 <script>
-/*
- * author kcz
- * date 2019-11-20
- * description 将json数据构建成表单
- */
 import buildBlocks from "./buildBlocks";
 import zhCN from "ant-design-vue/lib/locale-provider/zh_CN";
 import { lazyLoadTick } from "../../utils/index";
@@ -108,7 +103,6 @@ export default {
             if (err) {
               reject(err);
               /**
-               * @author: lizhichao<meteoroc@outlook.com>
                * @Description: 多容器校验时，提供error返回给多容器进行判断。
                */
               this.validatorError = err;

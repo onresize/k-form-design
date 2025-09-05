@@ -1,9 +1,5 @@
 <!--
  * @Description: 动态表格 用于批量填入数据
- * @Author: kcz
- * @Date: 2020-03-27 18:36:56
- * @LastEditors: kcz
- * @LastEditTime: 2022-10-31 20:40:41
  -->
 <template>
   <a-form-model

@@ -1,22 +1,12 @@
 <template>
   <a-config-provider :locale="locale">
     <div class="form-designer-container-9136076486841527" v-if="loadState">
-      <k-header v-if="showHead" :title="title" />
+      <!-- <k-header v-if="showHead" :title="title" /> -->
       <!-- 操作区域 start -->
-      <operatingArea
-        v-if="toolbarsTop"
-        :showToolbarsText="showToolbarsText"
-        :toolbars="toolbars"
-        @handleSave="handleSave"
-        @handlePreview="handlePreview"
-        @handleOpenImportJsonModal="handleOpenImportJsonModal"
-        @handleOpenCodeModal="handleOpenCodeModal"
-        @handleOpenJsonModal="handleOpenJsonModal"
-        @handleReset="handleReset"
-        @handleClose="handleClose"
-        @handleUndo="handleUndo"
-        @handleRedo="handleRedo"
-      >
+      <operatingArea v-if="toolbarsTop" :showToolbarsText="showToolbarsText" :toolbars="toolbars"
+        @handleSave="handleSave" @handlePreview="handlePreview" @handleOpenImportJsonModal="handleOpenImportJsonModal"
+        @handleOpenCodeModal="handleOpenCodeModal" @handleOpenJsonModal="handleOpenJsonModal" @handleReset="handleReset"
+        @handleClose="handleClose" @handleUndo="handleUndo" @handleRedo="handleRedo">
         <template slot="left-action">
           <slot name="left-action"></slot>
         </template>
@@ -26,32 +16,18 @@
         </template>
       </operatingArea>
       <!-- 操作区域 end -->
-      <div
-        class="content"
-        :class="{
-          'show-head': showHead,
-          'toolbars-top': toolbarsTop,
-          'show-head-and-toolbars-top': toolbarsTop && showHead
-        }"
-      >
+      <div class="content" :class="{
+        'show-head': showHead,
+        'toolbars-top': toolbarsTop,
+        'show-head-and-toolbars-top': toolbarsTop && showHead
+      }">
         <!-- 左侧控件区域 start -->
         <aside class="left">
-          <a-collapse
-            @change="collapseChange"
-            :defaultActiveKey="collapseDefaultActiveKey"
-          >
+          <a-collapse @change="collapseChange" :defaultActiveKey="collapseDefaultActiveKey">
             <!-- 基础控件 start -->
-            <a-collapse-panel
-              v-for="(item, index) in schemaGroup"
-              :header="item.title"
-              :key="index"
-            >
-              <collapseItem
-                :list="item.list"
-                @generateKey="generateKey"
-                @handleListPush="handleListPush"
-                @start="handleStart"
-              />
+            <a-collapse-panel v-for="(item, index) in schemaGroup" :header="item.title" :key="index">
+              <collapseItem :list="item.list" @generateKey="generateKey" @handleListPush="handleListPush"
+                @start="handleStart" />
             </a-collapse-panel>
             <!-- 基础控件 end -->
           </a-collapse>
@@ -61,20 +37,11 @@
         <!-- 中间面板区域 start -->
         <section>
           <!-- 操作区域 start -->
-          <operatingArea
-            v-if="!toolbarsTop"
-            :showToolbarsText="showToolbarsText"
-            :toolbars="toolbars"
-            @handleSave="handleSave"
-            @handlePreview="handlePreview"
-            @handleOpenImportJsonModal="handleOpenImportJsonModal"
-            @handleOpenCodeModal="handleOpenCodeModal"
-            @handleOpenJsonModal="handleOpenJsonModal"
-            @handleReset="handleReset"
-            @handleClose="handleClose"
-            @handleUndo="handleUndo"
-            @handleRedo="handleRedo"
-          >
+          <operatingArea v-if="!toolbarsTop" :showToolbarsText="showToolbarsText" :toolbars="toolbars"
+            @handleSave="handleSave" @handlePreview="handlePreview"
+            @handleOpenImportJsonModal="handleOpenImportJsonModal" @handleOpenCodeModal="handleOpenCodeModal"
+            @handleOpenJsonModal="handleOpenJsonModal" @handleReset="handleReset" @handleClose="handleClose"
+            @handleUndo="handleUndo" @handleRedo="handleRedo">
             <template slot="left-action">
               <slot name="left-action"></slot>
             </template>
@@ -84,16 +51,10 @@
             </template>
           </operatingArea>
           <!-- 操作区域 end -->
-          <k-form-component-panel
-            :class="{ 'no-toolbars-top': !toolbarsTop }"
-            :data="data"
-            :selectItem="selectItem"
-            :noModel="noModel"
-            :hideModel="hideModel"
-            :startType="startType"
-            ref="KFCP"
-            @handleSetSelectItem="handleSetSelectItem"
-          />
+          <k-form-component-panel :class="{ 'no-toolbars-top': !toolbarsTop }" :data="data" :selectItem="selectItem"
+            :noModel="noModel" :hideModel="hideModel" :startType="startType" ref="KFCP"
+            @handleSetSelectItem="handleSetSelectItem" />
+
           <!-- 操作区域 start -->
           <k-json-modal ref="jsonModal" />
           <k-code-modal ref="codeModal" />
@@ -104,23 +65,12 @@
 
         <!-- 右侧控件属性区域 start -->
         <aside class="right">
-          <a-tabs
-            :activeKey="activeKey"
-            @change="changeTab"
-            :tabBarStyle="{ margin: 0 }"
-          >
+          <a-tabs :activeKey="activeKey" @change="changeTab" :tabBarStyle="{ margin: 0 }">
             <a-tab-pane :key="1" tab="表单属性设置">
-              <formProperties
-                :config="data.config"
-                :previewOptions="previewOptions"
-              />
+              <formProperties :config="data.config" :previewOptions="previewOptions" />
             </a-tab-pane>
             <a-tab-pane :key="2" tab="控件属性设置">
-              <formItemProperties
-                class="form-item-properties"
-                :selectItem="selectItem"
-                :hideModel="hideModel"
-              />
+              <formItemProperties class="form-item-properties" :selectItem="selectItem" :hideModel="hideModel" />
             </a-tab-pane>
           </a-tabs>
         </aside>
@@ -131,14 +81,8 @@
   </a-config-provider>
 </template>
 <script>
-/*
- * author kcz
- * date 2019-11-20
- * description 表单设计器
- */
 import kHeader from "./module/header";
 import operatingArea from "./module/operatingArea";
-
 // import kFooter from "./module/footer";
 import kFormComponentPanel from "./module/formComponentPanel";
 import kJsonModal from "./module/jsonModal";
@@ -151,13 +95,14 @@ import { Modal, message } from "ant-design-vue";
 import { revoke, nodeSchema } from "../../utils/index";
 import formItemProperties from "./module/formItemProperties";
 import formProperties from "./module/formProperties";
+import { mapGetters } from 'vuex';
 
 export default {
   name: "KFormDesign",
   props: {
     title: {
       type: String,
-      default: "表单设计器 --by kcz"
+      default: "表单设计器"
     },
     showHead: {
       type: Boolean,
@@ -250,10 +195,25 @@ export default {
   },
   watch: {
     data: {
-      handler(e) {
+      handler(val) {
         this.$nextTick(() => {
-          revoke.push(e);
+          revoke.push(val);
         });
+      },
+      deep: true,
+      immediate: true
+    },
+    tabRowData: {
+      handler(val) {
+        console.log('监听到tmpTableRowActiveData变化：', val)
+        if (val.dataJson) {
+          this.$nextTick(() => {
+            const dataRet = JSON.parse(JSON.parse(val.dataJson))
+            this.data = dataRet
+          })
+        } else {
+          this.resetData();
+        }
       },
       deep: true,
       immediate: true
@@ -270,6 +230,9 @@ export default {
       } else {
         return ["1"];
       }
+    },
+    tabRowData() {
+      return this.$store.state.components.tmpTableRowActiveData;
     }
   },
   methods: {
@@ -367,7 +330,7 @@ export default {
         }
       };
       this.handleSetSelectItem({ key: "" });
-      message.success("已清空");
+      // message.success("已清空");
     },
     handleSetSelectItem(record) {
       // 操作间隔不能低于100毫秒
@@ -394,12 +357,10 @@ export default {
      * @param {*}
      * @return {*}
      */
-
     changeTab(e) {
       this.activeKey = e;
     },
     /**
-     * @Author: kcz
      * @description: 遍历json结构，获取所有字段
      * @param {*}
      * @return {*} Array
@@ -459,7 +420,6 @@ export default {
     handleStart(type) {
       this.startType = type;
     },
-
     /**
      * @description: 撤销
      * @param {*}
@@ -474,7 +434,6 @@ export default {
 
       this.handleSetSelectItem({ key: "" });
     },
-
     /**
      * @description: 重做
      * @param {*}
@@ -487,10 +446,14 @@ export default {
       }
       this.data = record;
     },
-
     handleSave() {
-      // 保存函数
-      this.$emit("save", JSON.stringify(this.data));
+      let rowData = {
+        ...this.tabRowData,
+        dataJson: JSON.stringify(this.data)
+      }
+      this.$emit("save", rowData);
+
+      console.log('保存提交前的参数：', rowData)
     },
     getValue() {
       // 获取数据
@@ -503,6 +466,8 @@ export default {
   created() {
     this.loadState = true;
     nodeSchema.addComputed(this.schemaGroup);
-  }
+    this.handleSetSelectItem({ key: "" }); // XXX需要清除已选择key
+  },
+  mounted() { },
 };
 </script>

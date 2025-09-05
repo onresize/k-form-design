@@ -1,45 +1,22 @@
 <!--
  * @Description: 多列选择 用于选择并且需要输入的表单
- * @Author: kcz
- * @Date: 2020-03-27 18:36:56
- * @LastEditors: kcz
- * @LastEditTime: 2022-11-02 22:27:21
  -->
 <template>
-  <a-form-model
-    class="select-input-list-box"
-    ref="dynamicValidateForm"
-    layout="inline"
-    :model="dynamicValidateForm"
-  >
+  <a-form-model class="select-input-list-box" ref="dynamicValidateForm" layout="inline" :model="dynamicValidateForm">
     <div v-for="(column, i) in record.columns" :key="i" class="list-col">
       <a-form-model-item class="w-auto">
-        <CheckboxItem
-          v-if="record.options.multiple"
-          @change="onCheckboxChange($event, i)"
-          :checked="dynamicValidateForm.domains[i].checked"
-        >
+        {{ column.label }}
+        <!-- <CheckboxItem v-if="record.options.multiple" @change="onCheckboxChange($event, i)"
+          :checked="dynamicValidateForm.domains[i].checked">
           {{ column.label }}
         </CheckboxItem>
-        <RadioItem
-          v-else
-          @change="onRadioChange($event, i)"
-          :checked="dynamicValidateForm.domains[i].checked"
-          >{{ column.label }}</RadioItem
-        >
+        <RadioItem v-else @change="onRadioChange($event, i)" :checked="dynamicValidateForm.domains[i].checked">
+          {{ column.label }}
+        </RadioItem> -->
       </a-form-model-item>
-      <KFormModelItem
-        v-for="item in column.list"
-        :key="item.key + '1'"
-        :record="item"
-        :config="config"
-        :parentDisabled="disabled"
-        :domains="dynamicValidateForm.domains"
-        :index="i"
-        :dynamicData="dynamicData"
-        v-model="dynamicValidateForm.domains[i][item.model]"
-        @input="handleInput"
-      />
+      <KFormModelItem v-for="item in column.list" :key="item.key + '1'" :record="item" :config="config"
+        :parentDisabled="disabled" :domains="dynamicValidateForm.domains" :index="i" :dynamicData="dynamicData"
+        v-model="dynamicValidateForm.domains[i][item.model]" @input="handleInput" />
     </div>
   </a-form-model>
 </template>

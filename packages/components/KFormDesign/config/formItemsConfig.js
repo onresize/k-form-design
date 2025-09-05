@@ -1,6 +1,4 @@
 /*
- * author kcz
- * date 2019-11-20
  * description 表单控件项
  */
 // 内置控件

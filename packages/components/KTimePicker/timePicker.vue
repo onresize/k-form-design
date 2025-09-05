@@ -1,9 +1,5 @@
 <!--
  * @Description: 时间选择器
- * @Author: kcz
- * @Date: 2020-01-11 17:30:48
- * @LastEditors: kcz
- * @LastEditTime: 2022-10-26 21:14:03
  -->
 <template>
   <TimePicker

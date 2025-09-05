@@ -33,10 +33,10 @@ class NodeSchema {
         "html"
       ]
     },
-    {
-      title: "布局组件",
-      list: ["divider", "card", "tabs", "grid", "table"]
-    }
+    // {
+    //   title: "布局组件",
+    //   list: ["divider", "card", "tabs", "grid", "table"]
+    // }
   ];
   designSchemaGroup = [];
 

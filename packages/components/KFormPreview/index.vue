@@ -8,7 +8,7 @@
     cancelText="关闭"
     style="top:20px;"
     :destroyOnClose="true"
-    :centered="true"
+    :centered="false"
     :dialogStyle="dialogStyle"
     :bodyStyle="bodyStyle"
     wrapClassName="k-form-modal"
@@ -24,10 +24,6 @@
   </a-modal>
 </template>
 <script>
-/*
- * author kcz
- * date 2019-11-20
- */
 import jsonModel from "../KFormDesign/module/jsonModal";
 import { dialogStyle, bodyStyle } from "../../config/modal.js";
 export default {

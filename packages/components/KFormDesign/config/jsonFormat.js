@@ -1,6 +1,4 @@
 /*
- * author kcz
- * date 2019-11-20
  * description 默认导入json数据格式
  */
 export default `{

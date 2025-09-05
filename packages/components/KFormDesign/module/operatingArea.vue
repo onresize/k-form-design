@@ -1,9 +1,5 @@
 <!--
  * @Description: 头部
- * @Author: kcz
- * @Date: 2019-12-30 00:37:05
- * @LastEditors: kcz
- * @LastEditTime: 2022-10-26 21:10:35
  -->
 <template>
   <div class="operating-area">
@@ -44,7 +40,7 @@
         </a>
       </a-tooltip>
 
-      <a-tooltip title="生成代码">
+      <!-- <a-tooltip title="生成代码">
         <a
           v-if="toolbars.includes('exportCode')"
           @click="$emit('handleOpenCodeModal')"
@@ -52,7 +48,7 @@
           <a-icon type="code" />
           <span v-if="showToolbarsText">生成代码</span>
         </a>
-      </a-tooltip>
+      </a-tooltip> -->
 
       <a-tooltip title="清空">
         <a v-if="toolbars.includes('reset')" @click="$emit('handleReset')">
@@ -93,11 +89,11 @@
       <slot name="right-action"></slot>
       <!-- 按钮右侧插槽 end -->
 
-      <a-tooltip title="关闭">
+      <!-- <a-tooltip title="关闭">
         <a v-if="toolbars.includes('close')" @click="$emit('handleClose')">
           <a-icon type="close" />
         </a>
-      </a-tooltip>
+      </a-tooltip> -->
     </div>
     <!-- 操作右侧区域 end -->
 

@@ -1,11 +1,3 @@
-/*
- * @Description: 组件输出文件,不打包antd ui组件
- * @Author: kcz
- * @Date: 2020-01-02 22:41:48
- * @LastEditors: kcz
- * @LastEditTime: 2022-10-26 23:27:26
- */
-
 // 导入样式
 import "../styles/form-design.less";
 // 导入antD样式
@@ -17,7 +9,6 @@ import "../static/icons/iconfont";
 import { pluginManager, revoke, nodeSchema, lazyLoadTick } from "./utils/index";
 
 /**
- * @Author: kcz
  * @description: 配置组件及添加自定义组件
  * @param {json}
  * @return: Boolean
@@ -76,7 +67,6 @@ function setFormDesignConfig(config) {
 }
 
 /**
- * @author lizhichao<meteoroc@outlook.com>
  * @description 配置k-form-build(预览时)，暂只支持dynamicData的设置
  * @param { object }config
  */

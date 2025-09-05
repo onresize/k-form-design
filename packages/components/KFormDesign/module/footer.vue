@@ -1,9 +1,5 @@
 <!--
  * @Description: 页脚
- * @Author: kcz
- * @Date: 2019-12-26 21:15:52
- * @LastEditors: kcz
- * @LastEditTime: 2022-10-25 21:36:53
  -->
 <template>
   <footer class="footer-9136076486841527">

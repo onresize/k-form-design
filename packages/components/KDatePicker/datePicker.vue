@@ -1,9 +1,5 @@
 <!--
  * @Description: 日期选择器
- * @Author: kcz
- * @Date: 2020-01-11 15:38:28
- * @LastEditors: kcz
- * @LastEditTime: 2022-10-26 21:13:01
  -->
 <template>
   <!-- 月份选择 -->

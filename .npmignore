@@ -4,7 +4,6 @@ examples/
 public/
 dist/
 static/
-docs/
 vue.config.js
 babel.config.js
 *.map

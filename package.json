@@ -1,39 +1,22 @@
 {
-  "name": "k-form-design",
-  "version": "3.8.20",
+  "name": "yw-form-design",
+  "version": "0.0.0",
   "private": false,
-  "description": "基于vue、ant-design-vue的表单设计器,可视化开发表单",
+  "description": "基于vue2、ant-design-vue的表单设计器,可视化开发表单",
   "license": "MIT",
-  "author": "kchengz",
-  "keywords": [
-    "ant-design",
-    "form",
-    "k-form-design",
-    "表单设计器",
-    "表单设计",
-    "可视化",
-    "工作流"
-  ],
-  "bugs": {
-    "url": "https://github.com/Kchengz/k-form-design/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Kchengz/k-form-design"
-  },
-  "main": "lib/k-form-design-mini.umd.min.js",
+  "author": "",
+  "main": "",
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve --mode dev",
     "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name k-form-design --dest lib packages/index.js && npm run lib:mini",
-    "lib:mini": "vue-cli-service build --target lib --name k-form-design-mini --dest lib packages/mini.js --no-clean",
-    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue packages/",
-    "lint": "vue-cli-service lint"
+    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue packages/"
   },
   "dependencies": {
     "ant-design-vue": "1.7.8",
+    "axios": "^0.26.0",
     "babel-polyfill": "^6.26.0",
     "clipboard": "^2.0.6",
+    "code-inspector-plugin": "^0.14.2",
     "core-js": "^2.6.5",
     "moment": "^2.24.0",
     "vcolorpicker": "^1.1.0",
@@ -41,7 +24,8 @@
     "vue-codemirror-lite": "^1.0.4",
     "vue-quill-editor": "^3.0.6",
     "vue-router": "^3.0.3",
-    "vuedraggable": "^2.23.2"
+    "vuedraggable": "^2.23.2",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.0",

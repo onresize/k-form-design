@@ -1,9 +1,5 @@
 <!--
  * @Description: 对vue-quill-editor封装
- * @Author: kcz
- * @Date: 2020-03-30 12:44:03
- * @LastEditors: kcz
- * @LastEditTime: 2022-10-19 13:53:56
  -->
 <template>
   <quillEditor

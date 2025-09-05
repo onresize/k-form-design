@@ -1,9 +1,5 @@
 <!--
  * @Description: 表单设计器内容展示操作组件
- * @Author: kcz
- * @Date: 2019-12-31 19:39:48
- * @LastEditors: kcz
- * @LastEditTime: 2022-11-12 00:11:55
  -->
 <template>
   <div class="form-panel">

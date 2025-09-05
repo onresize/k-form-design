@@ -517,8 +517,6 @@
 
 <script>
 /*
- * author kcz
- * date 2019-11-20
  * description 表单控件属性设置组件,因为配置数据是引用关系，所以可以直接修改
  */
 import KChangeOption from "../../KChangeOption/index.vue";

@@ -5,8 +5,6 @@
 </template>
 <script>
 /*
- * author kcz
- * date 2019-11-20
  * description 多选框组件,改成v-model Boolean值
  */
 import { pluginManager } from "../../utils/index";
